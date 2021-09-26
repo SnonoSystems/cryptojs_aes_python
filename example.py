@@ -1,9 +1,6 @@
-* base core api client for sas4
-* cryptojs aes encrypt in python
-
-
-example:
-```python
+from sas import SasAPI
+import json
+import aes
 
 # init a client
 sasclient = SasAPI()
@@ -48,5 +45,3 @@ data = sasclient.get(token, route)
 {'status': 200, 'data': [{'id': 1, 'name': 'default-2Mbit-1Month'}, {'id': 4, 'name': 'Plus'}, {'id': 2, 'name': 'Slow'}, {'id': 3, 'name': 'Standard'}], '0': 200}
 '''
 
-
-```
