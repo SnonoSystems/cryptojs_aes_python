@@ -11,8 +11,8 @@ HEADERS = {
 
 class SasAPI():
 
-    def __init__(self):
-        self.base_url = 'http://demo4.sasradius.com/admin/api/index.php/api/'
+    def __init__(self, url):
+        self.base_url = url + '/admin/api/index.php/api/'
         self.session = requests.Session()
         self.session.headers = HEADERS
 
