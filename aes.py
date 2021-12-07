@@ -24,6 +24,6 @@ def encrypt(plaintext):
     iv = salted[32:]
     iv = iv[:16]
     cipher = AES.new(key, AES.MODE_CBC, iv)
-    ciphertext = cipher.encrypt(pad(plaintext))
+    ciphertext = cipher.encrypt(pad(plaintext).encode('utf-8'))
     encoded = base64.b64encode(b'Salted__' + salt + ciphertext)
     return str(encoded.decode('utf-8'))
